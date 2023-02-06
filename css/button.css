@@ -12,33 +12,28 @@
     color: white;
     background-color: hsl(0, 100%, 50%);
     border: none;    
+    width: 30px;
+    height: 30px;
 }
 
-.button__removeTask:hover {
-    color: white;
-    background-color: hsl(0, 60%, 50%);
-    border: none;   
+.button__removeTask:hover {   
+    background-color: hsl(0, 60%, 50%);   
 }
 
 .button__done{
     display: flex;
     justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
     color: white;
     background-color: green;
     border: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .button__done:hover {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    color: white;
-    background-color: hsl(120, 60%, 25%);
-    border: none;
-    width: 20px;
-    height: 20px;
+    background-color: hsl(120, 60%, 25%);    
 }
 
 .taskDoneLineThrough {
