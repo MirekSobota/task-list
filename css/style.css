@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after, ::before {
+box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    max-width: 850px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
