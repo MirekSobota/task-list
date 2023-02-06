@@ -1,8 +1,7 @@
 # Task-list
 
-### Demo
-
- https://mireksobota.github.io/Task-list/
+##Demo
+ https://mireksobota.github.io/Task-list-v.2.0/
 
 
 ### Description
