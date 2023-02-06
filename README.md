@@ -1,17 +1,22 @@
 # Task-list
 
-##Demo
- https://mireksobota.github.io/Task-list-v.2.0/
+### Demo
+
+ https://mireksobota.github.io/Task-list/
 
 
 ### Description
-Simple task list, you can add tasks mark it as a done or remove it from list.
+Simple task list has been developed during programing course. 
+You can add tasks, mark it as a done by clicking on the green button or remove it from list by clicking on the green button.
 
-### Technologies
+Language: Polish 
+
+### Technologies:
 - HTML
 - JavaScript (ES6)
 - CSS
 - Grid
 - Flex
 - BEM
+- Media queries
 
