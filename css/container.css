@@ -25,7 +25,7 @@
     padding: 19px;
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(2, 1fr auto);
+    grid-template-columns: 1fr auto;
     grid-column-gap: 15px;
 }
 
@@ -50,7 +50,6 @@
     background-color: white;
     font-weight: 400;
     border: solid 1px grey;
-    grid-column: span 3;
 }
 
 .container__form--button {

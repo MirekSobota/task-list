@@ -8,34 +8,32 @@
     padding: 10px;
 }
 
-.button__removeTask {
-    color: white;
-    background-color: hsl(0, 100%, 50%);
-    border: none;    
-    width: 30px;
-    height: 30px;
-}
-
-.button__removeTask:hover {   
-    background-color: hsl(0, 60%, 50%);   
-}
-
-.button__done{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    color: white;
-    background-color: green;
+.taskButton {
     border: none;
     width: 30px;
     height: 30px;
 }
 
-.button__done:hover {
-    background-color: hsl(120, 60%, 25%);    
+.taskButton--done {
+    color: white;
+    background-color: green;
 }
 
-.taskDoneLineThrough {
+.taskButton--done:hover {
+    background-color: hsl(120, 60%, 25%);  
+}
+
+.taskButton--removeTask {
+    color: white;
+    background-color: hsl(0, 100%, 50%);
+}
+
+.taskDone {
     text-decoration: line-through;
-   };
+}
+
+.taskButton--removeTask:hover {
+    background-color: hsl(0, 60%, 50%);   
+}
+
+

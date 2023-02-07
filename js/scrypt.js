@@ -25,13 +25,13 @@
         for (const task of tasks) {
             htmlString += `
              <li class="taskList">                   
-                <button class="js-done button__done ">
-                    ${task.done ? "✔" : ""}  
+                <button class="js-done taskButton taskButton--done ">
+                ${task.done ? "✔" : ""}  
                 </button>            
-                <span ${task.done ? " class=\"taskDoneLineThrough\"" : ""}>
+                <span ${task.done ? " class=\"taskDone\"" : ""}>
                     ${task.content}
                 </span>
-                <button class="js-removeTask button__removeTask">
+                <button class="js-removeTask taskButton taskButton--removeTask">
                     🗑
                 </button>        
             </li>
@@ -70,7 +70,7 @@
 
         document.querySelector(".js-newTaskInput").focus();
         document.querySelector(".js-newTaskInput").value = ""; 
-        };
+    };
 
     const init = () => {
         render();
