@@ -10,11 +10,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;&display=swap"
         rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <link href="css/button.css" rel="stylesheet">
+    <link href="css/sectionOne.css" rel="stylesheet">
+    <link href="css/sectionTwo.css" rel="stylesheet">
     <script defer src="js/scrypt.js"></script>
     <meta property="og:image" content="https://mireksobota.github.io/Task-list/images/share.png">
     <link rel="icon" href="images/icon.png">
@@ -22,23 +24,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="container__header__H1">Lista zadań</h1>
+    <main>
+        <h1 class="section__header">Tasks list</h1>
         <section class="section">
-            <h2 class="container__subHeader__H2">Dodaj nowe zadanie</h2>
-            <form class="container__form js-form">
-                <input class="container__form--input js-newTaskInput" name="name" placeholder="Co jest do zrobienia?"
+            <div class="section__subHeader__div">Add new task</div>
+            <form class="section__form js-form">
+                <input class="section__form--input js-newTaskInput" name="name" placeholder="What need to be done?"
                     autofocus>
-                <button class="container__form--button">Dodaj zadanie</button>
+                <button class="section__form--button">Add task</button>
             </form>
         </section>
         <section class="section">
-            <h2 class="container__subHeader__H3">Lista zadań</h2>
-            <div class="container__tasks js-tasks"></div>
+            <div class="section__subHeader__div">A list of tasks </div>
+            <div class="section__tasks js-tasks"></div>
         </section>
-    </div>
-
-
+    </main>
 </body>
 
 </html>

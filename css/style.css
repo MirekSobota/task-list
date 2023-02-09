@@ -11,6 +11,7 @@ body {
     background-color: rgb(238, 238, 238);
     max-width: 850px;
     margin: auto;
+    padding: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
