@@ -1,23 +1,28 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-           });
+        tasks = [
+            ...tasks,
+            {content: newTaskContent}
+         ];
            
         render();
     };
 
     const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = [
+            ...tasks.slice(0, taskIndex), 
+            ...tasks.slice(taskIndex +1),
+        ];
+        
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
-    }
+    };
 
     const render = () => {
         let htmlString = "";
@@ -36,7 +41,7 @@
                 </button>        
             </li>
             `;
-        }
+        };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
