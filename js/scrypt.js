@@ -1,7 +1,7 @@
 {
     let tasks = [];
   
-    let hideDaneTasks = false;
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -66,9 +66,37 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
     // This function is to rendering buttons
-    const renderButtons = () => { };
+    const renderButtons = () => {
+       if(tasks == "") {
+        let htmlString =  `       
+        <button class="section__subHeader__button"></button>
+        `;   
+        document.querySelector(".js-buttonHideDone").innerHTML = htmlString;
 
-    // This function is for buttons " mark all as done" and "remove all done"
+        let htmlString2 = `       
+        <button class="section__subHeader__button"></button>
+        `;
+        document.querySelector(".js-buttonDoneAll").innerHTML = htmlString2;
+       }
+
+       else {
+        let htmlString =  `       
+        <button class="section__subHeader__button">Hide done tasks</button>
+        `;   
+        document.querySelector(".js-buttonHideDone").innerHTML = htmlString;
+
+        let htmlString2 = `       
+        <button class="section__subHeader__button">All tasks done</button>
+        `;
+        document.querySelector(".js-buttonDoneAll").innerHTML = htmlString2;
+       }
+       
+        
+     };
+
+   
+   
+     // This one need to be done
     const bindButtonsEvent = () => { };
 
     const render = () => {
