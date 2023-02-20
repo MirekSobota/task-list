@@ -19,8 +19,39 @@
     margin: 0;
      font-weight: 700;
     font-size: large; 
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
 }
 
+.section__subHeader__button {
+background: none;
+border: none;
+color:  hsl(188, 98%, 26%);
+}
 
+.section__subHeader__button:hover {
+   color:  hsl(188, 70%, 26%);
+}
 
+@media (max-width: 767px) {
+
+    .section__subHeader {
+        padding: 15px;
+        background-color: white;
+        margin: 0;
+        font-weight: 700;
+        font-size: large; 
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    
+    .section__subHeader__button {
+    background: none;
+    border: none;
+    padding: 10px;
+    color:  hsl(188, 98%, 26%);
+    }
+    
+
+}
 
