@@ -57,3 +57,6 @@ color:  hsl(188, 98%, 26%);
 
 }
 
+.buttonNoTasks {
+    display: none;
+}
