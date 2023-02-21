@@ -1,38 +1,47 @@
-
 .section__header {
     padding: 15px;
     padding-left: 0;
     margin: 0;
-     font-weight: 600;
+    font-weight: 600;
 }
 
 .section {
- display: grid;
- grid-gap: 5px;
- margin-top: 10px;;
- 
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 10px;
+    ;
+
 }
 
 .section__subHeader {
     padding: 15px;
     background-color: white;
     margin: 0;
-     font-weight: 700;
-    font-size: large; 
+    font-weight: 700;
+    font-size: large;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
 }
 
-.section__subHeader__button {
-background: none;
-border: none;
-color:  hsl(188, 98%, 26%);
+.section__subHeader__buttonHideDone {
+    background: none;
+    border: none;
+    color: hsl(188, 98%, 26%);
 }
 
-.section__subHeader__button:hover {
-   color:  hsl(0, 70%, 26%);
+.section__subHeader__buttonHideDone:hover {
+    color: hsl(0, 70%, 26%);
 }
 
+.section__subHeader__buttonFinishAll {
+    background: none;
+    border: none;
+    color: hsl(188, 98%, 26%);
+}
+
+.section__subHeader__buttonFinishAll:hover {
+    color: hsl(0, 70%, 26%);
+}
 
 @media (max-width: 767px) {
 
@@ -41,19 +50,26 @@ color:  hsl(188, 98%, 26%);
         background-color: white;
         margin: 0;
         font-weight: 700;
-        font-size: large; 
+        font-size: large;
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;
     }
-    
-    .section__subHeader__button {
-    background: none;
-    border: none;
-    padding: 10px;
-    color:  hsl(188, 98%, 26%);
-    align-self: center;
+
+    .section__subHeader__buttonHideDone {
+        background: none;
+        border: none;
+        padding: 10px;
+        color: hsl(188, 98%, 26%);
+        align-self: center;
     }
-    
+
+    .section__subHeader__buttonFinishAll {
+        background: none;
+        border: none;
+        padding: 10px;
+        color: hsl(188, 98%, 26%);
+        align-self: center;
+    }
 
 }
 

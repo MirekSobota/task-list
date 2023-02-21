@@ -45,12 +45,20 @@
     };
 
     const bindButtonsEvent = () => {
-        const toggleAllTaskDoneButton = document.querySelector(".js-buttonDoneAll");
-        //const buttonsDone = document.querySelectorAll(".js-done");
+        const toggleAllTaskDoneButton = document.querySelector(".js-buttonFinishAll");
+        
 
-        toggleAllTaskDoneButton.addEventListener("click", () => {
-            tasks = tasks.map((task) => ({ ...task, done: true }));
-        });
+        if(toggleAllTaskDoneButton) {
+            toggleAllTaskDoneButton.addEventListener("click", () => {
+                tasks = tasks.map((task) => ({ ...task, done: true }));
+            });
+            return true;
+        }
+        else {
+            return false;
+        }
+        
+       
     };
 
     const renderTasks = () => {
@@ -78,26 +86,18 @@
     const renderButtons = () => {
         if (!tasks.length) {
             let htmlString = `       
-        <button class="section__subHeader__button buttonNoTasks">Hide done tasks</button>
+        <button class="buttonNoTasks"></button>
+        <button class="buttonNoTasks"></button>
         `;
-            document.querySelector(".js-buttonHideDone").innerHTML = htmlString;
-
-            let htmlString2 = `       
-        <button class="section__subHeader__button buttonNoTasks">All tasks done</button>
-        `;
-            document.querySelector(".js-buttonDoneAll").innerHTML = htmlString2;
+            document.querySelector(".js-buttons").innerHTML = htmlString;      
         }
 
         else {
             let htmlString = `       
-        <button class="section__subHeader__button">Hide done tasks</button>
+        <button class="js-buttonHideDone section__subHeader__buttonHideDone">Hide done tasks</button>
+        <button class="js-buttonFinishAll section__subHeader__buttonFinishAll">Finish all tasks</button>
         `;
-            document.querySelector(".js-buttonHideDone").innerHTML = htmlString;
-
-            let htmlString2 = `       
-        <button class="section__subHeader__button">All tasks done</button>
-        `;
-            document.querySelector(".js-buttonDoneAll").innerHTML = htmlString2;
+            document.querySelector(".js-buttons").innerHTML = htmlString;        
         }
 
     };
