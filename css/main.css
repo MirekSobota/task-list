@@ -9,8 +9,16 @@
     display: grid;
     grid-gap: 5px;
     margin-top: 10px;
-    ;
+}
 
+.section__container {
+    background: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+}
+
+.section__tasks__buttons {
+    align-self: center;
 }
 
 .section__subHeader {
@@ -76,3 +84,4 @@
 .buttonNoTasks {
     display: none;
 }
+
