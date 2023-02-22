@@ -46,20 +46,20 @@
 
     const bindButtonsEvent = () => {
         const toggleAllTaskDoneButton = document.querySelector(".js-buttonFinishAll");
+        const buttonHideDone = document.querySelector(".js-buttonHideDone");
         
 
-        if(toggleAllTaskDoneButton) {
+        if(tasks.length) {
             toggleAllTaskDoneButton.addEventListener("click", () => {
                 tasks = tasks.map((task) => ({ ...task, done: true }));
-            });
-            return true;
-        }
-        else {
-            return false;
-        }
-        
-       
+                render();
+            }); 
+            
+        //  buttonHideDone.addEventListener("click", () => {
+        //     hideDoneTasks
+        //  } )   
     };
+};
 
     const renderTasks = () => {
         let htmlString = "";
