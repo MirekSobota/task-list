@@ -55,9 +55,10 @@
                 render();
             }); 
             
-        //  buttonHideDone.addEventListener("click", () => {
-        //     hideDoneTasks
-        //  } )   
+         buttonHideDone.addEventListener("click", () => {
+            hideDoneTasks = !hideDoneTasks;
+            render();   
+        });
     };
 };
 
@@ -94,7 +95,7 @@
 
         else {
             let htmlString = `       
-        <button class="js-buttonHideDone section__subHeader__buttonHideDone">Hide done tasks</button>
+        <button class="js-buttonHideDone section__subHeader__buttonHideDone" ${tasks.every(task => task.done) ? "disabled" : ""}>Hide done tasks</button>
         <button class="js-buttonFinishAll section__subHeader__buttonFinishAll">Finish all tasks</button>
         `;
             document.querySelector(".js-buttons").innerHTML = htmlString;        
