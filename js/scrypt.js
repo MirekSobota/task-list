@@ -57,17 +57,18 @@
             
          buttonHideDone.addEventListener("click", () => {
             hideDoneTasks = !hideDoneTasks;
+            console.log(hideDoneTasks);
             render();   
         });
     };
 };
 
-    const renderTasks = () => {
+    const renderTasks = (hideDoneTasks) => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-         <li class="taskList">                   
+         <li class="taskList" ${hideDoneTasks === true} ? "taskList--hidden" : >                   
             <button class="js-done taskButton taskButton--done ">
             ${task.done ? "✔" : ""}  
             </button>            
@@ -95,7 +96,7 @@
 
         else {
             let htmlString = `       
-        <button class="js-buttonHideDone section__subHeader__buttonHideDone" ${tasks.every(task => task.done) ? "disabled" : ""}>Hide done tasks</button>
+        <button class="js-buttonHideDone section__subHeader__buttonHideDone">Hide done tasks</button>
         <button class="js-buttonFinishAll section__subHeader__buttonFinishAll">Finish all tasks</button>
         `;
             document.querySelector(".js-buttons").innerHTML = htmlString;        
