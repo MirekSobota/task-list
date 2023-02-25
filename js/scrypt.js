@@ -57,7 +57,6 @@
             
          buttonHideDone.addEventListener("click", () => {
             hideDoneTasks = !hideDoneTasks;
-            console.log(hideDoneTasks);
             render();   
         });
     };
@@ -68,7 +67,7 @@
 
         for (const task of tasks) {
             htmlString += `
-         <li class="taskList" ${hideDoneTasks === true} ? "taskList--hidden" : >                   
+         <li class="taskList ${task.done && hideDoneTasks ? "taskList--hidden" : "" }">                   
             <button class="js-done taskButton taskButton--done ">
             ${task.done ? "✔" : ""}  
             </button>            
@@ -105,7 +104,6 @@
     };
 
     const render = () => {
-
         renderButtons();
         renderTasks();
         bindRemoveEvents();
