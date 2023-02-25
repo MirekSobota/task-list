@@ -62,7 +62,7 @@
     };
 };
 
-    const renderTasks = (hideDoneTasks) => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
