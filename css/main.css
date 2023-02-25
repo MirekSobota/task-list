@@ -81,10 +81,9 @@
 
 }
 
+
+
 .buttonNoTasks {
     display: none;
 }
 
-.taskList--hidden {
-    display: none;
-}

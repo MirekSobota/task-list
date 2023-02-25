@@ -41,3 +41,6 @@
 }
 
 
+.taskList--hidden {
+    display: none;
+}
