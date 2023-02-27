@@ -20,10 +20,12 @@
     color: rgb(255 255 255);
     font-weight: 400;
     border: none;
+    transition: 1s;
 }
 
 .section__form--button:hover {
-    background-color: hsl(188, 70%, 26%);
+    background-color: hsl(188, 50%, 26%);
+    transform: scale(1.2);
 }
 
 .section__form--button:active {

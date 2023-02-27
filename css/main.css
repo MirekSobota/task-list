@@ -14,7 +14,7 @@
 .section__container {
     background: white;
     display: grid;
-    grid-template-columns: 2fr 1fr ;
+    grid-template-columns: 2fr 1fr;
 }
 
 .section__tasks__buttons {
@@ -27,8 +27,6 @@
     margin: 0;
     font-weight: 700;
     font-size: large;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
 }
 
 .section__subHeader__buttonHideDone {
@@ -38,7 +36,7 @@
 }
 
 .section__subHeader__buttonHideDone:hover {
-    color: hsl(0, 70%, 26%);
+    color: hsl(188, 50%, 26%);
 }
 
 .section__subHeader__buttonFinishAll {
@@ -48,19 +46,21 @@
 }
 
 .section__subHeader__buttonFinishAll:hover {
-    color: hsl(0, 70%, 26%);
+    color: hsl(188, 50%, 26%);
 }
 
 @media (max-width: 767px) {
 
-    .section__subHeader {
-        padding: 15px;
-        background-color: white;
-        margin: 0;
-        font-weight: 700;
-        font-size: large;
+    .section__container {
+        background: white;
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .section__tasks__buttons {
+        align-self: center;
+        display: grid;
+
     }
 
     .section__subHeader__buttonHideDone {
@@ -81,9 +81,6 @@
 
 }
 
-
-
 .buttonNoTasks {
     display: none;
 }
-
