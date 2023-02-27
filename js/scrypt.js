@@ -84,6 +84,7 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
+
     const renderButtons = () => {
         if (!tasks.length) {
             let htmlString = `       
@@ -94,11 +95,15 @@
         }
 
         else {
+            
             let htmlString = `       
-        <button class="js-buttonHideDone section__subHeader__buttonHideDone">Hide done tasks</button>
-        <button class="js-buttonFinishAll section__subHeader__buttonFinishAll">Finish all tasks</button>
+        <button class="js-buttonHideDone section__subHeader__buttonHideDone">${!hideDoneTasks ? "Hide" : "Show"} done tasks</button>
+        <button class="js-buttonFinishAll section__subHeader__buttonFinishAll" ${tasks.every(({done}) => done) ? "disabled" : ""}>
+        Finish all tasks
+        </button>
         `;
-            document.querySelector(".js-buttons").innerHTML = htmlString;        
+        
+        document.querySelector(".js-buttons").innerHTML = htmlString;        
         }
 
     };
