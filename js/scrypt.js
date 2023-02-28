@@ -47,27 +47,27 @@
     const bindButtonsEvent = () => {
         const toggleAllTaskDoneButton = document.querySelector(".js-buttonFinishAll");
         const buttonHideDone = document.querySelector(".js-buttonHideDone");
-        
 
-        if(tasks.length) {
+
+        if (tasks.length) {
             toggleAllTaskDoneButton.addEventListener("click", () => {
                 tasks = tasks.map((task) => ({ ...task, done: true }));
                 render();
-            }); 
-            
-         buttonHideDone.addEventListener("click", () => {
-            hideDoneTasks = !hideDoneTasks;
-            render();   
-        });
+            });
+
+            buttonHideDone.addEventListener("click", () => {
+                hideDoneTasks = !hideDoneTasks;
+                render();
+            });
+        };
     };
-};
 
     const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-         <li class="taskList ${task.done && hideDoneTasks ? "taskList--hidden" : "" }">                   
+         <li class="taskList ${task.done && hideDoneTasks ? "taskList--hidden" : ""}">                   
             <button class="js-done taskButton taskButton--done ">
             ${task.done ? "✔" : ""}  
             </button>            
@@ -88,22 +88,24 @@
     const renderButtons = () => {
         if (!tasks.length) {
             let htmlString = `       
-        <button class="buttonNoTasks"></button>
-        <button class="buttonNoTasks"></button>
+            <button class="buttonNoTasks"></button>
+            <button class="buttonNoTasks"></button>
         `;
-            document.querySelector(".js-buttons").innerHTML = htmlString;      
+            document.querySelector(".js-buttons").innerHTML = htmlString;
         }
 
         else {
-            
+
             let htmlString = `       
-        <button class="js-buttonHideDone section__subHeader__buttonHideDone">${!hideDoneTasks ? "Hide" : "Show"} done tasks</button>
-        <button class="js-buttonFinishAll section__subHeader__buttonFinishAll" ${tasks.every(({done}) => done) ? "disabled" : ""}>
-        Finish all tasks
-        </button>
+            <button class="js-buttonHideDone section__subHeader__buttonHideDone">
+            ${!hideDoneTasks ? "Hide" : "Show"} done tasks
+            </button>
+            <button class="js-buttonFinishAll section__subHeader__buttonFinishAll" ${tasks.every(({ done }) => done) ? "disabled" : ""}>
+            Finish all tasks
+            </button>
         `;
-        
-        document.querySelector(".js-buttons").innerHTML = htmlString;        
+
+            document.querySelector(".js-buttons").innerHTML = htmlString;
         }
 
     };
