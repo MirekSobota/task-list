@@ -3,8 +3,9 @@ html {
 }
 
 *,
-::after, ::before {
-box-sizing: inherit;
+::after,
+::before {
+    box-sizing: inherit;
 }
 
 body {
@@ -14,8 +15,3 @@ body {
     padding: 10px;
     font-family: 'Montserrat', sans-serif;
 }
-
-
-
-
-

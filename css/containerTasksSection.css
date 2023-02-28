@@ -1,9 +1,0 @@
-.section__container {
-    background: white;
-    display: grid;
-    grid-template-columns: 2fr 1fr ;
-}
-.section__tasks__buttons {
-    align-self: center;
-}
-

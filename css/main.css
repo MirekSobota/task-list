@@ -44,16 +44,18 @@
     border: none;
     color: hsl(188, 98%, 26%);
 }
+
 .section__subHeader__buttonFinishAll:hover {
     color: hsl(188, 50%, 26%);
 }
 
-/* TEST DISABLED */
 .section__subHeader__buttonFinishAll:disabled {
     color: gray;
 }
 
-
+.buttonNoTasks {
+    display: none;
+}
 
 @media (max-width: 767px) {
 
@@ -85,8 +87,4 @@
         align-self: center;
     }
 
-}
-
-.buttonNoTasks {
-    display: none;
 }
