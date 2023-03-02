@@ -50,7 +50,7 @@
 }
 
 .section__subHeader__buttonFinishAll:disabled {
-    color: gray;
+    color: hsl(0, 0%, 87%);
 }
 
 .buttonNoTasks {

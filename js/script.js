@@ -69,7 +69,7 @@
             htmlString += `
          <li class="taskList ${task.done && hideDoneTasks ? "taskList--hidden" : ""}">                   
             <button class="js-done taskButton taskButton--done ">
-            ${task.done ? "✔" : ""}  
+                 ${task.done ? "✔" : ""}  
             </button>            
             <span ${task.done ? " class=\"taskDone\"" : ""}>
                 ${task.content}
